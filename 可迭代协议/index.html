@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            [Symbol.iterator]: function(){
+                let total= 10;
+                let i = 1;
+                return {
+                    next(){
+                        let obj = {
+                            value: i > total ? undefined : i,
+                            done: i > total
+                        }
+                        i++;
+                        return obj;
+                    }
+                }
+            }
+        }
+
+        const itarator = obj[Symbol.iterator]();
+        let result = itarator.next();
+        while (!result.done) {
+            console.log(result);
+            result = itarator.next();
+        }
+        console.log(result);
+
+        for (const iterator of obj) {
+            console.log(iterator);
+        }
+    </script>
+</body>
+</html>

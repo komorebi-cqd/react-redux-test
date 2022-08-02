@@ -1,0 +1,23 @@
+.arrow-left,.arrow-right{
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.arrow-left{
+    left: 0;
+}
+
+
+.arrow-right{
+    right: 0;
+}

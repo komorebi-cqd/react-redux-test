@@ -1,0 +1,8 @@
+.banner-container{
+    width: 500px;
+    height: 300px;
+    border: 2px solid #333;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}

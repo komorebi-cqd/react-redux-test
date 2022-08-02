@@ -1,0 +1,8 @@
+.img-group{
+    display: flex;
+    position: relative;
+}
+.img-group img{
+    display: inline-block;
+    flex-shrink: 0;
+}

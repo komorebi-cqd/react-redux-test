@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function* createGenerator() {
+            console.log('生成开始');
+            yield 1;
+            console.log(1);
+            yield 2;
+            console.log(2);
+            yield 3
+            console.log(3);
+            return '结束'
+        }
+
+
+        function* createArrayGenerator(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                const item = arr[i];
+                console.log(item);
+                yield item;
+            }
+
+            return '结束'
+        }
+
+        let generator = createArrayGenerator([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    </script>
+</body>
+
+</html>
