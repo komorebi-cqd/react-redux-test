@@ -1,0 +1,29 @@
+.container{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container .header{
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    background-color: #001529;
+    flex: 0;
+}
+
+.container .middle {
+    flex: 1;
+    display: flex;
+}
+
+.middle .aside{
+    flex: 0 0 208px;
+}
+
+.middle .main{
+    flex: auto;
+}
+
