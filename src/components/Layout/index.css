@@ -1,29 +1,64 @@
 .container{
-    width: 100vw;
-    min-height: 100vh;
+    width: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
-
 }
-
-.container .header{
-    width: 100%;
-    height: 48px;
-    line-height: 48px;
-    background-color: #001529;
-    flex: 0;
-}
-
-.container .middle {
-    flex: 1;
+.layout-sider{
     display: flex;
+    flex-direction: row;
+    min-height: 100%;
 }
 
-.middle .aside{
+.sider-left-placeholder{
+    max-width: 208px;
+    min-width: 208px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 208px;
+    background-color: aliceblue;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.sider-left-nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    box-shadow: 2px 0 8px 0 rgb(29 35 41 / 5%);
+    overflow: hidden;
+    width: 208px;
+    max-width: 208px;
+    min-width: 208px;
+    height: 100%;
     flex: 0 0 208px;
+    padding-top: 48px;
+    background-color: aqua;
+    box-sizing: border-box;
 }
 
-.middle .main{
-    flex: auto;
+.sider-left-nav-childer{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: -0.1px;
+    padding-top: 0.1px;
+}
+.sider-left-nav-childer-n{
+    flex: 1 1 0%;
+    overflow: hidden auto;
+
 }
 
+.sider-left-nav-childer-n::-webkit-scrollbar { width: 10px; } 
+.sider-left-nav-childer-n::-webkit-scrollbar-track { background: rgb(179, 177, 177); border-radius: 10px; } 
+.sider-left-nav-childer-n::-webkit-scrollbar-thumb { background: rgb(136, 136, 136); border-radius: 10px;   } 
+.sider-left-nav-childer-n::-webkit-scrollbar-thumb:hover { background: rgb(100, 100, 100);border-radius: 10px;   } 
+.sider-left-nav-childer-n::-webkit-scrollbar-thumb:active {background: rgb(68, 68, 68); border-radius: 10px;   }
+
+
+.layout-content{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+}

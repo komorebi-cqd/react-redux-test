@@ -11,17 +11,19 @@ export default class Layout extends React.Component {
     render(){
         return (
             <div className='container'>
-                <header className='header'>
-                    {this.props.header}
-                </header>
-                <div className='middle'>
-                    <aside className='aside'>
-                        {this.props.aside}
+                <section className='layout-sider'>
+                    <div className='sider-left-placeholder'></div>
+                    <aside className='sider-left-nav'>
+                        <div className='sider-left-nav-childer'>
+                            <div className='sider-left-nav-childer-n'>
+                                {this.props.aside}
+                            </div>
+                        </div>
                     </aside>
-                    <div className='main'>
+                    <div className='layout-content'>
                         {this.props.children}
                     </div>
-                </div>
+                </section>
             </div>
         )
     }
