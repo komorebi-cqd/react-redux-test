@@ -7,9 +7,13 @@ export default function Header() {
         <div className='header-content-left'>
             logo
         </div>
+        <div className='header-content-center'></div>
         <div className='header-content-right'>
-            <span>用户名</span>
-            <button>退出登录</button>
+            <div className='user-name'>
+              <img src="/4.jpg" alt="" />
+              <span>桃之助</span> 
+            </div>
+            <button className='logout'>退出登录</button>
         </div>
     </div>
   )
